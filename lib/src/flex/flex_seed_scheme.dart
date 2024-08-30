@@ -296,7 +296,7 @@ class FlexSeedScheme {
     @Deprecated('Use surface instead.') required this.background,
     @Deprecated('Use onSurface instead.') required this.onBackground,
     @Deprecated('Use surfaceContainerHighest instead.')
-    required this.surfaceVariant,
+        required this.surfaceVariant,
   });
 
   /// Factory that creates a [FlexSeedScheme] based on seed keys and FlexTones
@@ -881,14 +881,14 @@ extension SeedColorScheme on ColorScheme {
             Color(MaterialDynamicColors.primaryContainer.getArgb(scheme)),
         onPrimaryContainer: onPrimaryContainer ??
             Color(MaterialDynamicColors.onPrimaryContainer.getArgb(scheme)),
-        primaryFixed: primaryFixed ??
-            Color(MaterialDynamicColors.primaryFixed.getArgb(scheme)),
-        primaryFixedDim: primaryFixedDim ??
-            Color(MaterialDynamicColors.primaryFixedDim.getArgb(scheme)),
-        onPrimaryFixed: onPrimaryFixed ??
-            Color(MaterialDynamicColors.onPrimaryFixed.getArgb(scheme)),
-        onPrimaryFixedVariant: onPrimaryFixedVariant ??
-            Color(MaterialDynamicColors.onPrimaryFixedVariant.getArgb(scheme)),
+        // primaryFixed: primaryFixed ??
+        //     Color(MaterialDynamicColors.primaryFixed.getArgb(scheme)),
+        // primaryFixedDim: primaryFixedDim ??
+        //     Color(MaterialDynamicColors.primaryFixedDim.getArgb(scheme)),
+        // onPrimaryFixed: onPrimaryFixed ??
+        //     Color(MaterialDynamicColors.onPrimaryFixed.getArgb(scheme)),
+        // onPrimaryFixedVariant: onPrimaryFixedVariant ??
+        //     Color(MaterialDynamicColors.onPrimaryFixedVariant.getArgb(scheme)),
         secondary:
             secondary ?? Color(MaterialDynamicColors.secondary.getArgb(scheme)),
         onSecondary: onSecondary ??
@@ -897,15 +897,15 @@ extension SeedColorScheme on ColorScheme {
             Color(MaterialDynamicColors.secondaryContainer.getArgb(scheme)),
         onSecondaryContainer: onSecondaryContainer ??
             Color(MaterialDynamicColors.onSecondaryContainer.getArgb(scheme)),
-        secondaryFixed: secondaryFixed ??
-            Color(MaterialDynamicColors.secondaryFixed.getArgb(scheme)),
-        secondaryFixedDim: secondaryFixedDim ??
-            Color(MaterialDynamicColors.secondaryFixedDim.getArgb(scheme)),
-        onSecondaryFixed: onSecondaryFixed ??
-            Color(MaterialDynamicColors.onSecondaryFixed.getArgb(scheme)),
-        onSecondaryFixedVariant: onSecondaryFixedVariant ??
-            Color(
-                MaterialDynamicColors.onSecondaryFixedVariant.getArgb(scheme)),
+        // secondaryFixed: secondaryFixed ??
+        //     Color(MaterialDynamicColors.secondaryFixed.getArgb(scheme)),
+        // secondaryFixedDim: secondaryFixedDim ??
+        //     Color(MaterialDynamicColors.secondaryFixedDim.getArgb(scheme)),
+        // onSecondaryFixed: onSecondaryFixed ??
+        //     Color(MaterialDynamicColors.onSecondaryFixed.getArgb(scheme)),
+        // onSecondaryFixedVariant: onSecondaryFixedVariant ??
+        //     Color(
+        //         MaterialDynamicColors.onSecondaryFixedVariant.getArgb(scheme)),
         tertiary:
             tertiary ?? Color(MaterialDynamicColors.tertiary.getArgb(scheme)),
         onTertiary: onTertiary ??
@@ -914,14 +914,14 @@ extension SeedColorScheme on ColorScheme {
             Color(MaterialDynamicColors.tertiaryContainer.getArgb(scheme)),
         onTertiaryContainer: onTertiaryContainer ??
             Color(MaterialDynamicColors.onTertiaryContainer.getArgb(scheme)),
-        tertiaryFixed: tertiaryFixed ??
-            Color(MaterialDynamicColors.tertiaryFixed.getArgb(scheme)),
-        tertiaryFixedDim: tertiaryFixedDim ??
-            Color(MaterialDynamicColors.tertiaryFixedDim.getArgb(scheme)),
-        onTertiaryFixed: onTertiaryFixed ??
-            Color(MaterialDynamicColors.onTertiaryFixed.getArgb(scheme)),
-        onTertiaryFixedVariant: onTertiaryFixedVariant ??
-            Color(MaterialDynamicColors.onTertiaryFixedVariant.getArgb(scheme)),
+        // tertiaryFixed: tertiaryFixed ??
+        //     Color(MaterialDynamicColors.tertiaryFixed.getArgb(scheme)),
+        // tertiaryFixedDim: tertiaryFixedDim ??
+        //     Color(MaterialDynamicColors.tertiaryFixedDim.getArgb(scheme)),
+        // onTertiaryFixed: onTertiaryFixed ??
+        //     Color(MaterialDynamicColors.onTertiaryFixed.getArgb(scheme)),
+        // onTertiaryFixedVariant: onTertiaryFixedVariant ??
+        //     Color(MaterialDynamicColors.onTertiaryFixedVariant.getArgb(scheme)),
         error: error ?? Color(MaterialDynamicColors.error.getArgb(scheme)),
         onError:
             onError ?? Color(MaterialDynamicColors.onError.getArgb(scheme)),
@@ -935,21 +935,21 @@ extension SeedColorScheme on ColorScheme {
             Color(MaterialDynamicColors.outlineVariant.getArgb(scheme)),
         surface:
             surface ?? Color(MaterialDynamicColors.surface.getArgb(scheme)),
-        surfaceDim: surfaceDim ??
-            Color(MaterialDynamicColors.surfaceDim.getArgb(scheme)),
-        surfaceBright: surfaceBright ??
-            Color(MaterialDynamicColors.surfaceBright.getArgb(scheme)),
-        surfaceContainerLowest: surfaceContainerLowest ??
-            Color(MaterialDynamicColors.surfaceContainerLowest.getArgb(scheme)),
-        surfaceContainerLow: surfaceContainerLow ??
-            Color(MaterialDynamicColors.surfaceContainerLow.getArgb(scheme)),
-        surfaceContainer: surfaceContainer ??
-            Color(MaterialDynamicColors.surfaceContainer.getArgb(scheme)),
-        surfaceContainerHigh: surfaceContainerHigh ??
-            Color(MaterialDynamicColors.surfaceContainerHigh.getArgb(scheme)),
-        surfaceContainerHighest: surfaceContainerHighest ??
-            Color(
-                MaterialDynamicColors.surfaceContainerHighest.getArgb(scheme)),
+        // surfaceDim: surfaceDim ??
+        //     Color(MaterialDynamicColors.surfaceDim.getArgb(scheme)),
+        // surfaceBright: surfaceBright ??
+        //     Color(MaterialDynamicColors.surfaceBright.getArgb(scheme)),
+        // surfaceContainerLowest: surfaceContainerLowest ??
+        //     Color(MaterialDynamicColors.surfaceContainerLowest.getArgb(scheme)),
+        // surfaceContainerLow: surfaceContainerLow ??
+        //     Color(MaterialDynamicColors.surfaceContainerLow.getArgb(scheme)),
+        // surfaceContainer: surfaceContainer ??
+        //     Color(MaterialDynamicColors.surfaceContainer.getArgb(scheme)),
+        // surfaceContainerHigh: surfaceContainerHigh ??
+        //     Color(MaterialDynamicColors.surfaceContainerHigh.getArgb(scheme)),
+        // surfaceContainerHighest: surfaceContainerHighest ??
+        //     Color(
+        //         MaterialDynamicColors.surfaceContainerHighest.getArgb(scheme)),
         onSurface:
             onSurface ?? Color(MaterialDynamicColors.onSurface.getArgb(scheme)),
         onSurfaceVariant: onSurfaceVariant ??
@@ -995,11 +995,11 @@ extension SeedColorScheme on ColorScheme {
         primaryContainer: primaryContainer ?? Color(scheme.primaryContainer),
         onPrimaryContainer:
             onPrimaryContainer ?? Color(scheme.onPrimaryContainer),
-        primaryFixed: primaryFixed ?? Color(scheme.primaryFixed),
-        primaryFixedDim: primaryFixedDim ?? Color(scheme.primaryFixedDim),
-        onPrimaryFixed: onPrimaryFixed ?? Color(scheme.onPrimaryFixed),
-        onPrimaryFixedVariant:
-            onPrimaryFixedVariant ?? Color(scheme.onPrimaryFixedVariant),
+        // primaryFixed: primaryFixed ?? Color(scheme.primaryFixed),
+        // primaryFixedDim: primaryFixedDim ?? Color(scheme.primaryFixedDim),
+        // onPrimaryFixed: onPrimaryFixed ?? Color(scheme.onPrimaryFixed),
+        // onPrimaryFixedVariant:
+        //     onPrimaryFixedVariant ?? Color(scheme.onPrimaryFixedVariant),
         //
         secondary: secondary ?? Color(scheme.secondary),
         onSecondary: onSecondary ?? Color(scheme.onSecondary),
@@ -1007,40 +1007,39 @@ extension SeedColorScheme on ColorScheme {
             secondaryContainer ?? Color(scheme.secondaryContainer),
         onSecondaryContainer:
             onSecondaryContainer ?? Color(scheme.onSecondaryContainer),
-        secondaryFixed: secondaryFixed ?? Color(scheme.secondaryFixed),
-        secondaryFixedDim: secondaryFixedDim ?? Color(scheme.secondaryFixedDim),
-        onSecondaryFixed: onSecondaryFixed ?? Color(scheme.onSecondaryFixed),
-        onSecondaryFixedVariant:
-            onSecondaryFixedVariant ?? Color(scheme.onSecondaryFixedVariant),
+        // secondaryFixed: secondaryFixed ?? Color(scheme.secondaryFixed),
+        // secondaryFixedDim: secondaryFixedDim ?? Color(scheme.secondaryFixedDim),
+        // onSecondaryFixed: onSecondaryFixed ?? Color(scheme.onSecondaryFixed),
+        // onSecondaryFixedVariant:
+        //     onSecondaryFixedVariant ?? Color(scheme.onSecondaryFixedVariant),
         //
         tertiary: tertiary ?? Color(scheme.tertiary),
         onTertiary: onTertiary ?? Color(scheme.onTertiary),
         tertiaryContainer: tertiaryContainer ?? Color(scheme.tertiaryContainer),
         onTertiaryContainer:
             onTertiaryContainer ?? Color(scheme.onTertiaryContainer),
-        tertiaryFixed: tertiaryFixed ?? Color(scheme.tertiaryFixed),
-        tertiaryFixedDim: tertiaryFixedDim ?? Color(scheme.tertiaryFixedDim),
-        onTertiaryFixed: onTertiaryFixed ?? Color(scheme.onTertiaryFixed),
-        onTertiaryFixedVariant:
-            onTertiaryFixedVariant ?? Color(scheme.onTertiaryFixedVariant),
-        //
+        // tertiaryFixed: tertiaryFixed ?? Color(scheme.tertiaryFixed),
+        // tertiaryFixedDim: tertiaryFixedDim ?? Color(scheme.tertiaryFixedDim),
+        // onTertiaryFixed: onTertiaryFixed ?? Color(scheme.onTertiaryFixed),
+        // onTertiaryFixedVariant:
+        //     onTertiaryFixedVariant ?? Color(scheme.onTertiaryFixedVariant),
         error: error ?? Color(scheme.error),
         onError: onError ?? Color(scheme.onError),
         errorContainer: errorContainer ?? Color(scheme.errorContainer),
         onErrorContainer: onErrorContainer ?? Color(scheme.onErrorContainer),
         //
         surface: surface ?? Color(scheme.surface),
-        surfaceDim: surfaceDim ?? Color(scheme.surfaceDim),
-        surfaceBright: surfaceBright ?? Color(scheme.surfaceBright),
-        surfaceContainerLowest:
-            surfaceContainerLowest ?? Color(scheme.surfaceContainerLowest),
-        surfaceContainerLow:
-            surfaceContainerLow ?? Color(scheme.surfaceContainerLow),
-        surfaceContainer: surfaceContainer ?? Color(scheme.surfaceContainer),
-        surfaceContainerHigh:
-            surfaceContainerHigh ?? Color(scheme.surfaceContainerHigh),
-        surfaceContainerHighest:
-            surfaceContainerHighest ?? Color(scheme.surfaceContainerHighest),
+        // surfaceDim: surfaceDim ?? Color(scheme.surfaceDim),
+        // surfaceBright: surfaceBright ?? Color(scheme.surfaceBright),
+        // surfaceContainerLowest:
+        //     surfaceContainerLowest ?? Color(scheme.surfaceContainerLowest),
+        // surfaceContainerLow:
+        //     surfaceContainerLow ?? Color(scheme.surfaceContainerLow),
+        // surfaceContainer: surfaceContainer ?? Color(scheme.surfaceContainer),
+        // surfaceContainerHigh:
+        //     surfaceContainerHigh ?? Color(scheme.surfaceContainerHigh),
+        // surfaceContainerHighest:
+        //     surfaceContainerHighest ?? Color(scheme.surfaceContainerHighest),
         onSurface: onSurface ?? Color(scheme.onSurface),
         onSurfaceVariant: onSurfaceVariant ?? Color(scheme.onSurfaceVariant),
         //
@@ -1097,21 +1096,21 @@ extension SeedColorScheme on ColorScheme {
     final Hct? errorSourceColor =
         errorSeedColor != null ? Hct.fromInt(errorSeedColor.value) : null;
 
-    return switch (variant) {
-      FlexSchemeVariant.material ||
-      FlexSchemeVariant.material3Legacy ||
-      FlexSchemeVariant.soft ||
-      FlexSchemeVariant.vivid ||
-      FlexSchemeVariant.vividSurfaces ||
-      FlexSchemeVariant.highContrast ||
-      FlexSchemeVariant.ultraContrast ||
-      FlexSchemeVariant.jolly ||
-      FlexSchemeVariant.vividBackground ||
-      FlexSchemeVariant.oneHue ||
-      FlexSchemeVariant.candyPop ||
-      FlexSchemeVariant.chroma ||
-      FlexSchemeVariant.tonalSpot =>
-        SchemeTonalSpot(
+    switch (variant) {
+      case FlexSchemeVariant.material:
+      case FlexSchemeVariant.material3Legacy:
+      case FlexSchemeVariant.soft:
+      case FlexSchemeVariant.vivid:
+      case FlexSchemeVariant.vividSurfaces:
+      case FlexSchemeVariant.highContrast:
+      case FlexSchemeVariant.ultraContrast:
+      case FlexSchemeVariant.jolly:
+      case FlexSchemeVariant.vividBackground:
+      case FlexSchemeVariant.oneHue:
+      case FlexSchemeVariant.candyPop:
+      case FlexSchemeVariant.chroma:
+      case FlexSchemeVariant.tonalSpot:
+        return SchemeTonalSpot(
           sourceColorHct: primarySourceColor,
           secondarySourceColorHct: secondarySourceColor,
           tertiarySourceColorHct: tertiarySourceColor,
@@ -1121,8 +1120,9 @@ extension SeedColorScheme on ColorScheme {
           isDark: isDark,
           contrastLevel: contrastLevel,
           useExpressiveOnContainerColors: useExpressiveOnContainerColors,
-        ),
-      FlexSchemeVariant.fidelity => SchemeFidelity(
+        );
+      case FlexSchemeVariant.fidelity:
+        return SchemeFidelity(
           sourceColorHct: primarySourceColor,
           secondarySourceColorHct: secondarySourceColor,
           tertiarySourceColorHct: tertiarySourceColor,
@@ -1132,8 +1132,9 @@ extension SeedColorScheme on ColorScheme {
           isDark: isDark,
           contrastLevel: contrastLevel,
           useExpressiveOnContainerColors: useExpressiveOnContainerColors,
-        ),
-      FlexSchemeVariant.content => SchemeContent(
+        );
+      case FlexSchemeVariant.content:
+        return SchemeContent(
           sourceColorHct: primarySourceColor,
           secondarySourceColorHct: secondarySourceColor,
           tertiarySourceColorHct: tertiarySourceColor,
@@ -1143,26 +1144,17 @@ extension SeedColorScheme on ColorScheme {
           isDark: isDark,
           contrastLevel: contrastLevel,
           useExpressiveOnContainerColors: useExpressiveOnContainerColors,
-        ),
-      FlexSchemeVariant.monochrome => SchemeMonochrome(
+        );
+      case FlexSchemeVariant.monochrome:
+        return SchemeMonochrome(
           sourceColorHct: primarySourceColor,
           errorSourceColorHct: errorSourceColor,
           isDark: isDark,
           contrastLevel: contrastLevel,
           useExpressiveOnContainerColors: useExpressiveOnContainerColors,
-        ),
-      FlexSchemeVariant.neutral => SchemeNeutral(
-          sourceColorHct: primarySourceColor,
-          secondarySourceColorHct: secondarySourceColor,
-          tertiarySourceColorHct: tertiarySourceColor,
-          neutralSourceColorHct: neutralSourceColor,
-          neutralVariantSourceColorHct: neutralVariantSourceColor,
-          errorSourceColorHct: errorSourceColor,
-          isDark: isDark,
-          contrastLevel: contrastLevel,
-          useExpressiveOnContainerColors: useExpressiveOnContainerColors,
-        ),
-      FlexSchemeVariant.vibrant => SchemeVibrant(
+        );
+      case FlexSchemeVariant.neutral:
+        return SchemeNeutral(
           sourceColorHct: primarySourceColor,
           secondarySourceColorHct: secondarySourceColor,
           tertiarySourceColorHct: tertiarySourceColor,
@@ -1172,8 +1164,9 @@ extension SeedColorScheme on ColorScheme {
           isDark: isDark,
           contrastLevel: contrastLevel,
           useExpressiveOnContainerColors: useExpressiveOnContainerColors,
-        ),
-      FlexSchemeVariant.expressive => SchemeExpressive(
+        );
+      case FlexSchemeVariant.vibrant:
+        return SchemeVibrant(
           sourceColorHct: primarySourceColor,
           secondarySourceColorHct: secondarySourceColor,
           tertiarySourceColorHct: tertiarySourceColor,
@@ -1183,8 +1176,9 @@ extension SeedColorScheme on ColorScheme {
           isDark: isDark,
           contrastLevel: contrastLevel,
           useExpressiveOnContainerColors: useExpressiveOnContainerColors,
-        ),
-      FlexSchemeVariant.rainbow => SchemeRainbow(
+        );
+      case FlexSchemeVariant.expressive:
+        return SchemeExpressive(
           sourceColorHct: primarySourceColor,
           secondarySourceColorHct: secondarySourceColor,
           tertiarySourceColorHct: tertiarySourceColor,
@@ -1194,8 +1188,9 @@ extension SeedColorScheme on ColorScheme {
           isDark: isDark,
           contrastLevel: contrastLevel,
           useExpressiveOnContainerColors: useExpressiveOnContainerColors,
-        ),
-      FlexSchemeVariant.fruitSalad => SchemeFruitSalad(
+        );
+      case FlexSchemeVariant.rainbow:
+        return SchemeRainbow(
           sourceColorHct: primarySourceColor,
           secondarySourceColorHct: secondarySourceColor,
           tertiarySourceColorHct: tertiarySourceColor,
@@ -1205,7 +1200,19 @@ extension SeedColorScheme on ColorScheme {
           isDark: isDark,
           contrastLevel: contrastLevel,
           useExpressiveOnContainerColors: useExpressiveOnContainerColors,
-        ),
-    };
+        );
+      case FlexSchemeVariant.fruitSalad:
+        return SchemeFruitSalad(
+          sourceColorHct: primarySourceColor,
+          secondarySourceColorHct: secondarySourceColor,
+          tertiarySourceColorHct: tertiarySourceColor,
+          neutralSourceColorHct: neutralSourceColor,
+          neutralVariantSourceColorHct: neutralVariantSourceColor,
+          errorSourceColorHct: errorSourceColor,
+          isDark: isDark,
+          contrastLevel: contrastLevel,
+          useExpressiveOnContainerColors: useExpressiveOnContainerColors,
+        );
+    }
   }
 }

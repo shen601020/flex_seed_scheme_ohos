@@ -85,8 +85,8 @@ class ShowcaseMaterial extends StatelessWidget {
         const ExpansionPanelListShowcase(),
         const Divider(),
         const AppBarShowcase(),
-        const Divider(),
-        const SearchBarShowcase(),
+        // const Divider(),
+        // const SearchBarShowcase(),
         const Divider(),
         const BottomAppBarShowcase(),
         const Divider(),
@@ -568,9 +568,9 @@ class _SwitchShowcaseState extends State<SwitchShowcase> {
             },
           ),
           Switch(
-            thumbIcon: WidgetStateProperty.resolveWith<Icon?>(
-                (Set<WidgetState> states) {
-              if (states.contains(WidgetState.selected)) {
+            thumbIcon: MaterialStateProperty.resolveWith<Icon?>(
+                (Set<MaterialState> states) {
+              if (states.contains(MaterialState.selected)) {
                 return Icon(Icons.check,
                     color:
                         isLight ? colorScheme.primary : colorScheme.onPrimary);
@@ -953,8 +953,8 @@ class PopupMenuButtonsShowcase extends StatelessWidget {
                 style: denseBody,
               ),
             ),
-          const Row(
-            children: <Widget>[
+          Row(
+            children: const <Widget>[
               PopupMenuButtonShowcase(),
               SizedBox(width: 16),
               PopupMenuButtonTilesShowcase(),
@@ -1182,12 +1182,12 @@ class TooltipShowcase extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const RepaintBoundary(
+    return RepaintBoundary(
       child: Wrap(
         crossAxisAlignment: WrapCrossAlignment.center,
         spacing: 16,
         runSpacing: 4,
-        children: <Widget>[
+        children: const <Widget>[
           Tooltip(
             message: 'Current tooltip theme',
             child: Text('Text with tooltip'),
@@ -1270,7 +1270,7 @@ class IconButtonShowcase extends StatelessWidget {
   const IconButtonShowcase({super.key});
   @override
   Widget build(BuildContext context) {
-    return const RepaintBoundary(
+    return RepaintBoundary(
       child: Wrap(
         crossAxisAlignment: WrapCrossAlignment.center,
         spacing: 0,
@@ -1280,7 +1280,7 @@ class IconButtonShowcase extends StatelessWidget {
             // crossAxisAlignment: CrossAxisAlignment.center,
             // mainAxisAlignment: MainAxisAlignment.center,
             // Standard IconButton
-            children: <Widget>[
+            children: const <Widget>[
               SizedBox(
                   width: 65,
                   child: Text('Default', textAlign: TextAlign.center)),
@@ -1306,7 +1306,7 @@ class IconButtonShowcase extends StatelessWidget {
             ],
           ),
           Column(
-            children: <Widget>[
+            children: const <Widget>[
               SizedBox(
                   width: 65,
                   child: Text('Filled', textAlign: TextAlign.center)),
@@ -1333,7 +1333,7 @@ class IconButtonShowcase extends StatelessWidget {
             ],
           ),
           Column(
-            children: <Widget>[
+            children: const <Widget>[
               SizedBox(
                   width: 65, child: Text('Tonal', textAlign: TextAlign.center)),
               SizedBox(height: 4),
@@ -1359,7 +1359,7 @@ class IconButtonShowcase extends StatelessWidget {
             ],
           ),
           Column(
-            children: <Widget>[
+            children: const <Widget>[
               SizedBox(
                   width: 65,
                   child: Text('Outlined', textAlign: TextAlign.center)),
@@ -1436,33 +1436,54 @@ class _IconToggleButtonState extends State<_IconToggleButton> {
         }
       case _IconButtonVariant.filled:
         {
-          return IconButton.filled(
+          return IconButton(
             isSelected: selected & widget.toggleable,
             tooltip: widget.tooltip,
             icon: const Icon(Icons.settings_outlined),
             selectedIcon: const Icon(Icons.settings),
             onPressed: onPressed,
           );
+          // return IconButton.filled(
+          //   isSelected: selected & widget.toggleable,
+          //   tooltip: widget.tooltip,
+          //   icon: const Icon(Icons.settings_outlined),
+          //   selectedIcon: const Icon(Icons.settings),
+          //   onPressed: onPressed,
+          // );
         }
       case _IconButtonVariant.filledTonal:
         {
-          return IconButton.filledTonal(
+          return IconButton(
             isSelected: selected & widget.toggleable,
             tooltip: widget.tooltip,
             icon: const Icon(Icons.settings_outlined),
             selectedIcon: const Icon(Icons.settings),
             onPressed: onPressed,
           );
+          // return IconButton.filledTonal(
+          //   isSelected: selected & widget.toggleable,
+          //   tooltip: widget.tooltip,
+          //   icon: const Icon(Icons.settings_outlined),
+          //   selectedIcon: const Icon(Icons.settings),
+          //   onPressed: onPressed,
+          // );
         }
       case _IconButtonVariant.outlined:
         {
-          return IconButton.outlined(
+          return IconButton(
             isSelected: selected & widget.toggleable,
             tooltip: widget.tooltip,
             icon: const Icon(Icons.settings_outlined),
             selectedIcon: const Icon(Icons.settings),
             onPressed: onPressed,
           );
+          // return IconButton.outlined(
+          //   isSelected: selected & widget.toggleable,
+          //   tooltip: widget.tooltip,
+          //   icon: const Icon(Icons.settings_outlined),
+          //   selectedIcon: const Icon(Icons.settings),
+          //   onPressed: onPressed,
+          // );
         }
     }
   }
@@ -1895,82 +1916,82 @@ class _BehindAppBar extends StatelessWidget {
   }
 }
 
-class SearchBarShowcase extends StatefulWidget {
-  const SearchBarShowcase({super.key});
-
-  @override
-  State<SearchBarShowcase> createState() => _SearchBarShowcaseState();
-}
-
-class _SearchBarShowcaseState extends State<SearchBarShowcase> {
-  bool isMicOn = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return Theme(
-      data: Theme.of(context).copyWith(
-        inputDecorationTheme: const InputDecorationTheme(
-          // border: InputBorder.none,
-          focusedBorder: InputBorder.none,
-          // enabledBorder: InputBorder.none,
-          // disabledBorder: InputBorder.none,
-          // errorBorder: InputBorder.none,
-          // focusedErrorBorder: InputBorder.none,
-          filled: false,
-        ),
-      ),
-      child: Builder(builder: (BuildContext context) {
-        return Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: SearchAnchor(
-              builder: (BuildContext context, SearchController controller) {
-            return SearchBar(
-              controller: controller,
-              hintText: 'Search using SearchBar',
-              padding: const WidgetStatePropertyAll<EdgeInsets>(
-                  EdgeInsets.symmetric(horizontal: 16.0)),
-              onTap: () {
-                controller.openView();
-              },
-              onChanged: (_) {
-                controller.openView();
-              },
-              leading: const Icon(Icons.search),
-              trailing: <Widget>[
-                Tooltip(
-                  message: 'Voice search',
-                  child: IconButton(
-                    isSelected: isMicOn,
-                    onPressed: () {
-                      setState(() {
-                        isMicOn = !isMicOn;
-                      });
-                    },
-                    icon: const Icon(Icons.mic_off),
-                    selectedIcon: const Icon(Icons.mic),
-                  ),
-                )
-              ],
-            );
-          }, suggestionsBuilder:
-                  (BuildContext context, SearchController controller) {
-            return List<ListTile>.generate(7, (int index) {
-              final String item = 'item $index';
-              return ListTile(
-                title: Text(item),
-                onTap: () {
-                  setState(() {
-                    controller.closeView(item);
-                  });
-                },
-              );
-            });
-          }),
-        );
-      }),
-    );
-  }
-}
+// class SearchBarShowcase extends StatefulWidget {
+//   const SearchBarShowcase({super.key});
+//
+//   @override
+//   State<SearchBarShowcase> createState() => _SearchBarShowcaseState();
+// }
+//
+// class _SearchBarShowcaseState extends State<SearchBarShowcase> {
+//   bool isMicOn = false;
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Theme(
+//       data: Theme.of(context).copyWith(
+//         inputDecorationTheme: const InputDecorationTheme(
+//           // border: InputBorder.none,
+//           focusedBorder: InputBorder.none,
+//           // enabledBorder: InputBorder.none,
+//           // disabledBorder: InputBorder.none,
+//           // errorBorder: InputBorder.none,
+//           // focusedErrorBorder: InputBorder.none,
+//           filled: false,
+//         ),
+//       ),
+//       child: Builder(builder: (BuildContext context) {
+//         return Padding(
+//           padding: const EdgeInsets.all(16.0),
+//           child: SearchAnchor(
+//               builder: (BuildContext context, SearchController controller) {
+//             return SearchBar(
+//               controller: controller,
+//               hintText: 'Search using SearchBar',
+//               padding: const WidgetStatePropertyAll<EdgeInsets>(
+//                   EdgeInsets.symmetric(horizontal: 16.0)),
+//               onTap: () {
+//                 controller.openView();
+//               },
+//               onChanged: (_) {
+//                 controller.openView();
+//               },
+//               leading: const Icon(Icons.search),
+//               trailing: <Widget>[
+//                 Tooltip(
+//                   message: 'Voice search',
+//                   child: IconButton(
+//                     isSelected: isMicOn,
+//                     onPressed: () {
+//                       setState(() {
+//                         isMicOn = !isMicOn;
+//                       });
+//                     },
+//                     icon: const Icon(Icons.mic_off),
+//                     selectedIcon: const Icon(Icons.mic),
+//                   ),
+//                 )
+//               ],
+//             );
+//           }, suggestionsBuilder:
+//                   (BuildContext context, SearchController controller) {
+//             return List<ListTile>.generate(7, (int index) {
+//               final String item = 'item $index';
+//               return ListTile(
+//                 title: Text(item),
+//                 onTap: () {
+//                   setState(() {
+//                     controller.closeView(item);
+//                   });
+//                 },
+//               );
+//             });
+//           }),
+//         );
+//       }),
+//     );
+//   }
+// }
 
 class BottomAppBarShowcase extends StatelessWidget {
   const BottomAppBarShowcase({
@@ -2740,7 +2761,7 @@ class MenuAnchorShowcase extends StatelessWidget {
               style: denseBody,
             ),
           ),
-        const Row(
+        Row(
           children: <Widget>[
             Expanded(
               child: MenuAnchorContextMenu(
@@ -2847,7 +2868,7 @@ class _MenuAnchorContextMenuState extends State<MenuAnchorContextMenu> {
       onTapDown: _handleTapDown,
       child: MenuAnchor(
         controller: _menuController,
-        consumeOutsideTap: true,
+        // consumeOutsideTap: true,
         menuChildren: <Widget>[
           MenuItemButton(
             child: Text(MenuEntry.about.label),
@@ -2940,9 +2961,11 @@ class _MenuAnchorContextMenuState extends State<MenuAnchorContextMenu> {
           applicationName: 'MenuAnchor Demo',
           applicationVersion: '1.0.0',
         );
+        break;
       case MenuEntry.showMessage:
       case MenuEntry.hideMessage:
         showingMessage = !showingMessage;
+        break;
       case MenuEntry.colorMenu:
         break;
       case MenuEntry.colorRed:
@@ -3115,7 +3138,7 @@ class ListTileAllShowcase extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: <Widget>[
         ListTileShowcase(),
         Divider(height: 1),
@@ -3630,7 +3653,7 @@ class MaterialBannerSnackBarShowcase extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         SnackBarShowcase(),

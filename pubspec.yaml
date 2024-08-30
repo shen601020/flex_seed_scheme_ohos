@@ -28,14 +28,16 @@ topics:
   - materialdesign
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
-  flutter: '>=3.22.0'
+#  sdk: '>=3.0.0 <4.0.0'
+#  flutter: '>=3.22.0'
+  sdk: '>=2.19.6 <4.0.0'
+  flutter: '>=3.7.12-ohos'
 
 dependencies:
   # Used by mcu: tonal_palette.dart
   # Require at least 1.15.0, the first stable version for null-safety.
   # https://pub.dev/packages/collection
-  collection: ^1.18.0
+  collection: ^1.17.0
 
   flutter:
     sdk: flutter
@@ -53,5 +55,5 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   # Used by color_matcher.dart in tests.
-  matcher: ^0.12.16+1
+#  matcher: ^0.12.16+1
   test:

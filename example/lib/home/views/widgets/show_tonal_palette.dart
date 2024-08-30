@@ -64,6 +64,7 @@ class ShowTonalPalette extends StatelessWidget {
             neutralVariantTonals
                 .add(dynamicScheme.neutralVariantPalette.get(i));
           }
+          break;
         case FlexPaletteType.extended:
           for (final int i in FlexTonalPalette.extendedTones) {
             primaryTonals.add(dynamicScheme.primaryPalette.get(i));

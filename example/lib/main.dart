@@ -17,20 +17,30 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListenableBuilder(
-      listenable: controller,
-      builder: (BuildContext context, Widget? child) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'SeedColorScheme.fromSeeds',
-          themeMode: controller.themeMode,
-          theme: AppTheme.light(controller),
-          darkTheme: AppTheme.dark(controller),
-          highContrastTheme: AppTheme.highContrastLight(controller),
-          highContrastDarkTheme: AppTheme.highContrastDark(controller),
-          home: HomePage(controller: controller),
-        );
-      },
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'SeedColorScheme.fromSeeds',
+      themeMode: controller.themeMode,
+      theme: AppTheme.light(controller),
+      darkTheme: AppTheme.dark(controller),
+      highContrastTheme: AppTheme.highContrastLight(controller),
+      highContrastDarkTheme: AppTheme.highContrastDark(controller),
+      home: HomePage(controller: controller),
     );
+    // return ListenableBuilder(
+    //   listenable: controller,
+    //   builder: (BuildContext context, Widget? child) {
+    //     return MaterialApp(
+    //       debugShowCheckedModeBanner: false,
+    //       title: 'SeedColorScheme.fromSeeds',
+    //       themeMode: controller.themeMode,
+    //       theme: AppTheme.light(controller),
+    //       darkTheme: AppTheme.dark(controller),
+    //       highContrastTheme: AppTheme.highContrastLight(controller),
+    //       highContrastDarkTheme: AppTheme.highContrastDark(controller),
+    //       home: HomePage(controller: controller),
+    //     );
+    //   },
+    // );
   }
 }
